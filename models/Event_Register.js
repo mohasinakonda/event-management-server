@@ -8,6 +8,10 @@ const EventRegister = new Schema({
     type: String,
     required: true,
   },
+  eventId: {
+    type: String,
+    required: true,
+  },
   userPhone: {
     type: String,
     required: true,
@@ -40,7 +44,7 @@ const EventRegister = new Schema({
     type: String,
     required: true,
   },
-  relation: {
+  grade: {
     type: Number,
     required: true,
   },

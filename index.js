@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 // const { userRegister } = require("./controllers/userRegister.js");
 // const { product } = require("./controllers/product.js");
-const userRegister = require("./routes/userRegister.js");
+const eventRegister = require("./routes/eventRegister.js");
 const product = require("./routes/products.js");
 const { default: mongoose } = require("mongoose");
 require("dotenv/config");
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send({ success: true });
 });
 // custom middleware
-app.use("/user-register", userRegister);
+app.use("/event-register", eventRegister);
 app.use("/product", product);
 
 app.use((error, _req, res, next) => {

@@ -22,5 +22,19 @@ const getProducts = async (req, res, next) => {
     next(err);
   }
 };
+const getProductsByCity = async (req, res, next) => {
+  try {
+    const product = await Product.find({
+      location: req.params.city,
+    });
+    res.status(200).send(product);
+  } catch (err) {
+    next(err);
+  }
+};
 
-module.exports = { productRegister, getProducts };
+module.exports = {
+  productRegister,
+  getProducts,
+  getProductsByCity,
+};
