@@ -4,11 +4,23 @@ const ProductsSchema = new Schema({
     type: String,
     required: true,
   },
-  price: {
+  priceMoney: {
     type: Number,
     required: true,
   },
-  desc: {
+  description: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  ageRange: {
+    type: String,
+    required: true,
+  },
+  type: {
     type: String,
     required: true,
   },
@@ -18,7 +30,6 @@ const ProductsSchema = new Schema({
   },
   photos: {
     type: [],
-    required: true,
   },
 });
 
